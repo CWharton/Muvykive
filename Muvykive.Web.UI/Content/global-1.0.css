@@ -1,0 +1,87 @@
+body
+{
+    font-size: .85em;
+    font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background-color: #fff;
+    background: #f6fffb url('images/background-sprite.png') repeat-x 0 -102px
+}
+
+header, footer, nav, section { display: block; }
+body, div, ul, li, h1, h2, h3, h1, h5, h6, form, fieldset { padding: 0; margin: 0; font-weight: normal; }
+
+#wrapper { float: left; width: 100%; }
+#header, #body_container, #footer { width: 962px; margin-left: auto; margin-right: auto; overflow: hidden; }
+#header { height: 141px; }
+#header #top_content { float: left; width: 962px; height: 89px; }
+#footer { text-align: center; border-top: solid 1px #eee; padding: 5px; font-size: .9em; }
+#logo { float: left; width: 205px; line-height: 130px; padding: 0 0 0 10px; }
+#logo a { text-decoration: none; color: #000; font-size: 26px; font-weight: bold; }
+#main_menu { float: left; width: 962px; height: 47px; background: url('images/menu_bg.png') no-repeat; }
+#main_menu ul.nav { list-style: none; height: 43px; width: 645px; float: left; }
+#main_menu .nav li { float: left; font-size: 14px; line-height: 40px; padding-right: 2px; text-transform: uppercase; }
+#main_menu .nav li a {  padding: 0 22px; text-decoration: none; color: #fff; }
+#main_menu ul.search { list-style: none; float: left; width: 314px; height: 33px; padding-top: 10px; }
+#search_box { border: solid 1px #000; background-color: #333; padding: 3px; }
+#search_box input[type="text"] { width: 270px; }
+#main_menu input[type="text"] { border: 0; background-color: transparent; font-size: 14px; color: #fff; }
+
+.content { background-color: #fff; padding: 5px 15px; min-height: 400px; }
+.inner_panel { background-color: #f2f2dc; border: solid 1px #ccc; padding: 5px; }
+
+.list_results { width: 100%; border-collapse: collapse; font: Verdana, Arial, sans-serif 13px; padding: 5px; }
+.list_results .even { background-color: #f2f2dc; }
+.list_results td { padding: 10px 12px 8px 0; }
+.list_results .number { padding: 10px 8px 10px 10px; color: #333; }
+.list_results .image {  }
+.list_results .title a { font-weight: bold; }
+.list_results .description { font-size: smaller; margin: 0.4em 0 0; }
+.list_results span.genre { color: #CCC; font-size: smaller; display: block; float: left; margin: 0.2em 0.5em 0 -0.2em; }
+.list_results span.genre a {font-weight: normal; text-decoration: none; margin: 0 0.3em 0 0.2em; }
+span.certificate { font-size: smaller; display: block; float: right; margin: -.1em 0 0 0.5em; color: #999; font-weight: 900; border: 1px solid #999; padding: 1px 2px; }
+.list_results span.runtime { font-size: smaller; display: block; float: right; margin: 0.2em 0 0; }
+
+.feature_list { font-size: 1.1em; padding: 10px; margin: 0 0 0 20px; }
+.feature_list li { padding: 5px 0; }
+.feature_list span { font-weight: bold; }
+.feature_list div { font-size: .8em; padding-left: 10px; }
+
+.clear { clear: both; }
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+fieldset { border:1px solid #ddd; padding:0 1.4em 1.4em 1.4em; margin:0 0 1.5em 0; }
+legend { font-size:1.2em; font-weight: bold; }
+textarea { min-height: 75px; }
+.editor-label { margin: 1em 0 0 0; }
+.editor-label label { width: 350px; }
+.editor-field { margin:0.5em 0 0 0; }
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error { color: #ff0000; }
+.field-validation-valid { display: none; }
+.input-validation-error { border: 1px solid #ff0000; background-color: #ffeeee; }
+.validation-summary-errors { font-weight: bold; color: #ff0000; }
+.validation-summary-valid { display: none; }
+
+/* USER CONTROLS */
+.date { width: 75px; }
+
+/* Form styles */
+.inner-sidebar { clear: right; float: right; position: relative; width: 251px; }
+.postbox  { border: 1px solid #E5E5E5; border-radius: 3px 3px 3px 3px; margin-bottom: 20px; padding: 0; background-color: #F5F5F5; background-image: -moz-linear-gradient(center top , #F9F9F9, #F5F5F5); }
+.postbox h3 { border-bottom: solid 1px #E5E5E5; margin-top: 1px; background-color: #F1F1F1; background-image: -moz-linear-gradient(center top , #F9F9F9, #ECECEC); padding: 5px; }
+.postbox .inside { padding: 5px 10px; }
+
+#delete-action { float: left; line-height: 25px; text-align: left; }
+#save-action { float: right; line-height: 23px; text-align: right; }
+
+#form-body { clear: left; float: left; margin-right: -340px; width: 100%; }
+#form-body-content { margin-right: 265px; }
+#form-body-content div { padding: 5px; }
+
+#genre_list { padding: 5px 0 5px 30px; }
+#genre_list li { padding: 2px; }
+
+#selected_movie { text-align: center; padding: 6px; font-weight: bold;}

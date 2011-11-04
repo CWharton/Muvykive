@@ -3,8 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Muvykive.Web.UI", "Muvykive.Web.UI\Muvykive.Web.UI.csproj", "{4B28A2B5-F358-4F82-86B9-54A95D93C5B3}"
 	ProjectSection(ProjectDependencies) = postProject
-		{C652B578-3E5A-4D0F-B324-EC9D4AC616C8} = {C652B578-3E5A-4D0F-B324-EC9D4AC616C8}
-		{546DAE8A-0577-450A-8BDB-594F9E1C2356} = {546DAE8A-0577-450A-8BDB-594F9E1C2356}
+		{F1FD69F7-5C2E-4BB9-8737-193112D5B0BC} = {F1FD69F7-5C2E-4BB9-8737-193112D5B0BC}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Muvykive.Repository", "Muvykive.Repository\Muvykive.Repository.csproj", "{C652B578-3E5A-4D0F-B324-EC9D4AC616C8}"
@@ -13,6 +12,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Muvykive.Repository", "Muvy
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Muvykive.Model", "Muvykive.Model\Muvykive.Model.csproj", "{546DAE8A-0577-450A-8BDB-594F9E1C2356}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Muvykive.Services", "Muvykive.Service\Muvykive.Services.csproj", "{F1FD69F7-5C2E-4BB9-8737-193112D5B0BC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{546DAE8A-0577-450A-8BDB-594F9E1C2356} = {546DAE8A-0577-450A-8BDB-594F9E1C2356}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +36,10 @@ Global
 		{546DAE8A-0577-450A-8BDB-594F9E1C2356}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{546DAE8A-0577-450A-8BDB-594F9E1C2356}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{546DAE8A-0577-450A-8BDB-594F9E1C2356}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1FD69F7-5C2E-4BB9-8737-193112D5B0BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1FD69F7-5C2E-4BB9-8737-193112D5B0BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1FD69F7-5C2E-4BB9-8737-193112D5B0BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1FD69F7-5C2E-4BB9-8737-193112D5B0BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

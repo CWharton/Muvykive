@@ -2,13 +2,60 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>@ViewBag.Title</title>
-    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
-    <script src="@Url.Content("~/Scripts/jquery-1.5.1.min.js")" type="text/javascript"></script>
-    <script src="@Url.Content("~/Scripts/modernizr-1.7.min.js")" type="text/javascript"></script>
+    <title>Muvykive - @ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/global-1.0.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/themes/base/jquery-ui-1.8.16.custom.css")" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-    @RenderBody()
+    <div id="wrapper">
+        <div id="main_container">
+            <div id="header">
+                <div id="top_content">
+                    <div id="logo">
+                        <a href="@Url.Action("index", "Home")">
+                            @*<img src="@Url.Content("")" alt="Muvykive" />*@
+                            Muvykive
+                        </a>
+                    </div>
+                </div>
+                <br class="clear">
+                <div id="main_menu" class="ui-corner-all">
+                    <ul class="nav">
+                        <li>@Html.ActionLink("Home", "index", "Home")</li>
+                        <li>@Html.ActionLink("New Movie", "Edit", "Movie", new {id = 0}, new{})</li>
+                        <li id="movie-picker-menu" style="display: none;"><a href="#" id="movie-picker">Movie Picker</a></li>
+                        <li>@Html.ActionLink("About", "About", "Info")</li>
+                    </ul>
+                    <ul class="search" style="display: none;">
+                        <li>
+                            <span id="search_box" class="ui-corner-all">
+                                <input type="text"/>
+                                <input type="image" src="@Url.Content("~/Content/images/search.png")" />
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <br class="clear">
+            <div id="body_container">
+                @RenderBody()        
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        Muvykive version 0.1.0dev | Special thanks to <a href="http://www.proace.com/" target="_new">Proace</a> for taking the time to look at my work. :)
+    </div>
+
+    <div id="dialog-movie-picker" title="Movie Picker">
+        <div id="selected_movie"></div>
+    </div>
+    @Content.Script("jquery-1.6.4.min.js", Url)
+    @Content.Script("jquery-ui-1.8.16.min.js", Url)
+    @*@Content.Script("modernizr-1.7.min.js", Url) :TODO Uncomment this when implementing browser check*@
+    @Content.Script("json2.js", Url)
+    @Content.Script("global_v1.0.js", Url)
+    @RenderSection("scripts", false)
 </body>
 </html>

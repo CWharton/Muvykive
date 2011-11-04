@@ -1,0 +1,35 @@
+﻿@model Muvykive.Service.Messaging.Movie.GetMovieListResponse
+
+@{
+    ViewBag.Title = "Home";
+}
+<fieldset class="content ui-corner-all">
+    <table class="list_results">
+        @{int movieCount = 0;}
+        @foreach (var item in Model.Movies) {
+        movieCount++;
+        <tr class="@((movieCount % 2) == 0 ? "even" : "odd")">
+            <td class="number" valign="top">@movieCount.</td>
+            <td class="image">&nbsp;</td>
+            <td class="title">
+                @Html.ActionLink(item.Name, "Details", "Movie", new { id = item.Id }, new { })
+                @if (@item.Released.Year > 1)
+                {
+                    <span>(@item.Released.Year)</span>   
+                }
+                <div class="description">
+                    
+                </div>
+                <span class="genre">
+                @foreach (var genre in item.Genres)
+                {
+                    <span style="color: #000;">@genre.Name</span> @:|
+                }
+                </span>
+                <span class="certificate ui-corner-all">@item.CertificationAbbreviation</span>
+                <span class="runtime">@item.RunTime mins.</span>
+            </td>
+        </tr>
+        }
+    </table>
+</fieldset>

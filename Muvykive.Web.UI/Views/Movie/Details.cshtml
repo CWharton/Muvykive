@@ -1,0 +1,42 @@
+﻿@model Muvykive.Web.UI.ViewModels.DetailMovieView
+
+@{
+    ViewBag.Title = Model.Movie.Name;
+}
+
+<h2 style="float:left;">@Html.DisplayFor(model => model.Movie.Name) 
+@if (@Model.Movie.Released.HasValue)
+{
+    <span>(@Model.Movie.Released.Value.Year)</span>   
+}
+</h2>
+<span style="line-height: 25px;">
+    &nbsp; @Html.ActionLink("Edit", "Edit", new { id = Model.Movie.Id })
+</span>
+<br class="clear" />
+<fieldset class="content ui-corner-all">
+    <div id="form-body">
+        <div id="form-body-content">
+            <div>
+                @Model.Movie.CertificationAbbreviation - @Model.Movie.CertificationRating
+            </div>
+
+            <div>
+                <span>@Html.LabelFor(model => model.Movie.Released):</span>
+                <span>
+                @if (@Model.Movie.Released.HasValue)
+                {
+                    @Model.Movie.Released.Value.Year
+                }
+                </span>
+            </div>
+
+            <div>
+                <span>@Html.LabelFor(model => model.Movie.RunTime):</span>
+                <span>
+                    @Model.Movie.RunTime mins.
+                </span>
+            </div>
+        </div>
+    </div>
+</fieldset>
